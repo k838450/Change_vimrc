@@ -3,7 +3,7 @@ scriptencoding utf-8
 if exists('g:loaded_Change_vimrc_main')
 	finish
 endif
-let g:loaded_Change_vimrc_mark
+let g:loaded_Change_vimrc_main
 
 if exists('g:loaded_Change_vimrc_mark')
 	finish
