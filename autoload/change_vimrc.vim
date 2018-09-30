@@ -14,7 +14,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-function! Change_vimrc_main()
+function! s:Change_vimrc_main()
 	let readfile = "/Users/koba/.mainrc"
 	if filereadable(readfile)
 		let fromname = "/Users/koba/.vimrc"
@@ -27,7 +27,7 @@ function! Change_vimrc_main()
 endfunction	
 	
 
-function! Change_vimrc_mark()
+function! s:Change_vimrc_mark()
 	let readfile = "/Users/koba/.markrc"
 	if filereadable(readfile)
 		let fromname = "/Users/koba/.vimrc"
