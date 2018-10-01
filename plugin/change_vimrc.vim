@@ -5,7 +5,7 @@ if !exists('g:loaded_Change_vimrc_main')
 endif
 let g:loaded_Change_vimrc_main = 1
 
-if exists('g:loaded_Change_vimrc_mark')
+if !exists('g:loaded_Change_vimrc_mark')
 	finish
 endif
 let g:loaded_Change_vimrc_mark = 1
