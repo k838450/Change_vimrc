@@ -1,9 +1,9 @@
 scriptencoding utf-8
 
-if !exists('g:loaded_Change_vimrc')
+if exists('g:loaded_change_vimrc')
 	finish
 endif
-let g:loaded_Change_vimrc = 1
+let g:loaded_change_vimrc = 1
 
 let s:save_cpo = &cpo
 set cpo&vim
