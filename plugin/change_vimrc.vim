@@ -1,14 +1,9 @@
 scriptencoding utf-8
 
-if !exists('g:loaded_Change_vimrc_main')
+if !exists('g:loaded_Change_vimrc')
 	finish
 endif
-let g:loaded_Change_vimrc_main = 1
-
-if !exists('g:loaded_Change_vimrc_mark')
-	finish
-endif
-let g:loaded_Change_vimrc_mark = 1
+let g:loaded_Change_vimrc = 1
 
 let s:save_cpo = &cpo
 set cpo&vim
