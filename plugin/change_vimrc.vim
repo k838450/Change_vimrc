@@ -19,6 +19,7 @@ function s:Change_vimrc_main()
 		call rename(comname,fromname)
 	else
 		echo ".mainrc does not exist"
+	endif
 endfunction	
 	
 
@@ -32,6 +33,7 @@ function s:Change_vimrc_mark()
 		call rename(toname,fromname)
 	else
 		echo ".markrc does not exist"
+	endif
 endfunction
 
 
