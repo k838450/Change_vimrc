@@ -14,7 +14,7 @@ function s:Change_vimrc_main()
 	if filereadable(readfile)
 		let fromname = "/Users/koba/.vimrc"
 		let toname = "/Users/koba/.markrc"
-		let comname = "Users/koba/.mainrc"
+		let comname = "/Users/koba/.mainrc"
 		call rename(fromname,toname)
 		call rename(comname,fromname)
 	else
@@ -28,7 +28,7 @@ function s:Change_vimrc_mark()
 	if filereadable(readfile)
 		let fromname = "/Users/koba/.vimrc"
 		let toname = "/Users/koba/.markrc"
-		let comname = "Users/koba/.mainrc"
+		let comname = "/Users/koba/.mainrc"
 		call rename(fromname,comname)
 		call rename(toname,fromname)
 	else
