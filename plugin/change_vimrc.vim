@@ -6,8 +6,8 @@ let g:loaded_change_vimrc = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-command! -nargs=0 Main call <SID>Change_vimrc_main()<CR>
-command! -nargs=0 Mark call <SID>Change_vimrc_mark()<CR>
+command! -nargs=0 -complete=command Main call <SID>Change_vimrc_main()<CR>
+command! -nargs=0 -complete=command Mark call <SID>Change_vimrc_mark()<CR>
 
 function s:Change_vimrc_main()
 	let readfile = "/Users/koba/.mainrc"
