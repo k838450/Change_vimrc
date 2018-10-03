@@ -12,11 +12,11 @@ command! -nargs=0 -complete=command Mark call <SID>Change_vimrc_mark<CR>
 function s:Change_vimrc_main()
 	let readfile = "/Users/koba/.mainrc"
 	if filereadable(readfile)
-		let fromname = "/Users/koba/.vimrc"
-		let toname = "/Users/koba/.markrc"
-		let comname = "/Users/koba/.mainrc"
-		call rename(fromname,toname)
-		call rename(comname,fromname)
+		let s:fromname = "/Users/koba/.vimrc"
+		let s:toname = "/Users/koba/.markrc"
+		let s:comname = "/Users/koba/.mainrc"
+		call rename(s:fromname,s:toname)
+		call rename(s:comname,s:fromname)
 	else
 		echo ".mainrc does not exist"
 	endif
@@ -26,11 +26,11 @@ endfunction
 function s:Change_vimrc_mark()
 	let readfile = "/Users/koba/.markrc"
 	if filereadable(readfile)
-		let fromname = "/Users/koba/.vimrc"
-		let toname = "/Users/koba/.markrc"
-		let comname = "/Users/koba/.mainrc"
-		call rename(fromname,comname)
-		call rename(toname,fromname)
+		let s:fromname = "/Users/koba/.vimrc"
+		let s:toname = "/Users/koba/.markrc"
+		let s:comname = "/Users/koba/.mainrc"
+		call rename(s:fromname,s:comname)
+		call rename(s:toname,s:fromname)
 	else
 		echo ".markrc does not exist"
 	endif
