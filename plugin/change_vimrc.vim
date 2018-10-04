@@ -14,10 +14,15 @@ command! -nargs=0 Main call <SID>Change_vimrc_main()<CR>
 command! -nargs=0 Mark call <SID>Change_vimrc_mark()<CR>
 
 function s:Change_vimrc_main()
-	echo ".mainrc does not exist"
+	let readfile = "/Users/koba/.mainrc"
+	if filereadable(readfile)
+		call rename(s:fromname, s:toname)
+		call rename(s:comname, s:fromname)
+	else
+		echo ".mainrc does not exist"
+	endif 
 endfunction	
 	
-
 function s:Change_vimrc_mark()
 	let readfile = "/Users/koba/.markrc"
 	if filereadable(readfile)
@@ -27,7 +32,6 @@ function s:Change_vimrc_mark()
 		echo ".markrc does not exist"
 	endif
 endfunction
-
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
