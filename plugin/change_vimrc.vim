@@ -14,13 +14,7 @@ command! -nargs=0 Main call <SID>Change_vimrc_main()<CR>
 command! -nargs=0 Mark call <SID>Change_vimrc_mark()<CR>
 
 function s:Change_vimrc_main()
-	let readfile = "/Users/koba/.mainrc"
-	if filereadable(readfile)
-		call rename(s:fromname, s:toname)
-		call rename(s:comname, s:fromname)
-	else
-		echo ".mainrc does not exist"
-	endif
+	echo ".mainrc does not exist"
 endfunction	
 	
 
